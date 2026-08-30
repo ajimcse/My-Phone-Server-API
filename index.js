@@ -1,3 +1,19 @@
+const bgLoadData = async () => {
+    const res = await fetch(
+        'https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089'
+    );
+
+    const data = await res.json();
+    console.log(data);
+
+    const phoneContainer = document.getElementById('phone-container');
+
+    phoneContainer.innerHTML = `
+        <img src="${data.data.image}" alt="iPhone">
+    `;
+};
+
+bgLoadData();
 
 const loadData = async () => {
     const res = await fetch(
