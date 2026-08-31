@@ -12,7 +12,6 @@ const bgLoadData = async () => {
         <img src="${data.data.image}" alt="iPhone">
     `;
 };
-
 bgLoadData();
 
 const loadData = async () => {
